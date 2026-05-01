@@ -2,8 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ماهو تخصص عـامــــــل في الميكـــرو معلـوماتيـــة .</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>تخصص عامل في الميكرو معلوماتية</title>
     <style>
         :root {
             --blue: #0077be;
@@ -13,10 +13,14 @@
             --green: #0077be;
         }
         
-        body {
-            font-family: 'Tajawal', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
             background: linear-gradient(135deg, var(--light-blue), var(--white));
             color: #333;
             line-height: 1.6;
@@ -31,9 +35,9 @@
         }
         
         .header h1 {
-            margin: 0;
             font-size: 2.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            padding: 0 1rem;
         }
         
         .container {
@@ -57,14 +61,15 @@
             border-bottom: 2px solid var(--red);
             padding-bottom: 0.5rem;
             margin-top: 0;
+            margin-bottom: 1rem;
         }
         
         .highlight-box {
             background-color: var(--light-blue);
-            border-left: 4px solid var(--blue);
+            border-right: 4px solid var(--blue);
             padding: 1rem;
             margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
+            border-radius: 8px 0 0 8px;
         }
         
         .mission-card {
@@ -76,37 +81,78 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
+        .mission-card h3 {
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* جعل الصور متجاوبة */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* زر الرابط */
+        .more-details {
+            text-align: center;
             margin: 2rem 0;
         }
         
-        .gallery img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+        .detail-link {
+            display: inline-block;
+            background-color: var(--blue);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         
-        .gallery img:hover {
-            transform: scale(1.05);
+        .detail-link:hover {
+            background-color: #005f8a;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         
+        /* تذييل الصفحة */
         footer {
             background: linear-gradient(to right, var(--blue), var(--white), var(--red));
-            color: rgb(224, 19, 19);
             text-align: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
+            color: #a00;
         }
         
+        footer h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        hr {
+            margin: 0.5rem auto;
+            width: 80%;
+            border: 0;
+            height: 1px;
+            background: rgba(0,0,0,0.2);
+        }
+        
+        /* للهواتف */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+            .section {
+                padding: 1.2rem;
+            }
+            .detail-link {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -120,80 +166,69 @@
     </header>
     
     <main class="container">
+        <!-- القسم الأول: معلومات عامة -->
         <section class="section">
-            <h2>معلومات عامة عن التخصص:</h2>
+            <h2>معلومات عامة عن التخصص</h2>
             <div class="highlight-box">
-                <p>هذا التخصص يتبع لتخصصات <strong>الإعلام الآلي</strong> حسب تصنيف المدونة الوطنية لتخصصات التكوين المهني .</p>
+                <p>هذا التخصص يتبع لتخصصات <strong>الإعلام الآلي</strong> حسب تصنيف المدونة الوطنية لتخصصات التكوين المهني.</p>
             </div>
-            
             <ul>
-                <li><strong>الشعبة:</strong> إعلام آلي _الرقمنة_الإتصالات (INT) .</li>
-                <li><strong>رمز التخصص:</strong> INT 1202 .</li>
+                <li><strong>الشعبة:</strong> إعلام آلي - الرقمنة - الإتصالات (INT).</li>
+                <li><strong>رمز التخصص:</strong> INT 1202.</li>
                 <li><strong>المستوى التأهيلي:</strong> 03.</li>
-                <li><strong>الشهادة المسلمة:</strong> شهادة التحكم المهني. </li>
-                <li><strong>مدة التكوين:</strong> 18 شهر (منها شهر تطبيقي في مؤسسة عمومية أو خاصة). </li>
-                <li><strong>المستوى الدراسي المطلوب:</strong> الرابعة متوسط .</li>
-                <li><strong>نمط التكوين:</strong> حضوري (الإقامي) - التمهين .</li>
-               <br> </br>
-
-                <h2> بطاقة الوصفية للتخصص : </h2>
-                    <img src="rad.jpg"
-                
+                <li><strong>الشهادة المسلمة:</strong> شهادة التحكم المهني.</li>
+                <li><strong>مدة التكوين:</strong> 18 شهراً (منها شهر تطبيقي في مؤسسة عمومية أو خاصة).</li>
+                <li><strong>المستوى الدراسي المطلوب:</strong> الرابعة متوسط.</li>
+                <li><strong>نمط التكوين:</strong> حضوري (الإقامي) - التمهين.</li>
             </ul>
+            <h2>بطاقة وصفية للتخصص</h2>
+            <img class="responsive-img" src="rad.jpg" alt="بطاقة التخصص الوصفية">
         </section>
         
+        <!-- القسم الثاني: المهام وفرص العمل -->
         <section class="section">
-            
-            
-                 <br> </br>
-                      <h2>المهام الأساسية لعامل في الميكرو معلوماتية .</h2>
-            
+            <h2>المهام الأساسية لعامل في الميكرو معلوماتية</h2>
             <div class="mission-card">
-                <h3>تركيب وسائل المعلوماتية:</h3>
+                <h3>تركيب وسائل المعلوماتية</h3>
                 <p>تجهيز وتركيب الأجهزة والمعدات المعلوماتية بكفاءة عالية.</p>
             </div>
-            
             <div class="mission-card">
-                <h3>.تحيين يومي لأنظمة المعلوماتية :</h3>
-                <p>ضمان تحديث الأنظمة والبرامج بشكل منتظم .</p>
+                <h3>تحيين يومي لأنظمة المعلوماتية</h3>
+                <p>ضمان تحديث الأنظمة والبرامج بشكل منتظم.</p>
             </div>
-            
             <div class="mission-card">
-                <h3>فحص ومعالجة الأعطاب :</h3>
-                <p>تشخيص وإصلاح الأعطاب من المستوى الأول .</p>
-             <br>
-                <h2>  فرص العمل :</h2>
-            <p>  في كل  قطاعات الاعلام الألي العامة أو العمومية. </p>
+                <h3>فحص ومعالجة الأعطاب</h3>
+                <p>تشخيص وإصلاح الأعطاب من المستوى الأول.</p>
+            </div>
+            <div class="mission-card">
+                <h3>فرص العمل</h3>
+                <p>في كل قطاعات الإعلام الآلي العامة أو الخاصة.</p>
             </div>
         </section>
         
+        <!-- القسم الثالث: مسار التطور -->
         <section class="section">
-            <h2> مسار التطور التكويني  ;</h2>
+            <h2>مسار التطور التكويني</h2>
             <p>بعد الحصول على هذه الشهادة يمكنك:</p>
             <ul>
-                <li>مواصلة التكوين لتصبح <strong>  لمستغل معلوماتية .</strong></li>
-                <li>التقدم لتصبح <strong>تقني سامي</strong> عبر المعابر المهنية .</li>
-              
+                <li>مواصلة التكوين لتصبح <strong>مستغل معلوماتية</strong>.</li>
+                <li>التقدم لتصبح <strong>تقني سامي</strong> عبر المعابر المهنية.</li>
             </ul>
-       <body> <h1> </h1>
-     <img width="720" src="photo_2025-04-15_10-56-57.jpg" alt="">
-
-
-       </body>  
-                
+            <img class="responsive-img" src="photo_2025-04-15_10-56-57.jpg" alt="صورة توضيحية">
+        </section>
+        
+        <!-- الرابط المطلوب لمزيد من التفاصيل -->
+        <div class="more-details">
+            <a href="https://omi-hub.lovable.app" target="_blank" class="detail-link">🔗 لمزيد من التفاصيل والبرنامج الكامل، اضغط هنا</a>
+        </div>
+    </main>
     
     <footer>
-        <div> </div>
         <div class="container">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ماهو تخصص عـامــــــل في الميكـــرو معلـوماتيـــة</title>
-             
-    <h1>. Créé Par : B.O et H.R </h1>
-    <hr> 
-    <p>جميع الحقوق محفوظة &copy; 2025 - تخصص عامل في الميكرو معلوماتية</p>
+            <h3>Créé Par : B.O et H.R</h3>
+            <hr>
+            <p>جميع الحقوق محفوظة &copy; 2025 - تخصص عامل في الميكرو معلوماتية</p>
         </div>
     </footer>
 </body>
 </html>
-    <meta thhp-equiv="X-UA--compatible" content="IE=edage,chrome=1">
-    <meta name="viewport" content="width=de, initial-scale=1.0">
